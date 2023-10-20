@@ -1,6 +1,6 @@
 import ListItem from "./ListItem";
 
-export default function List({ items, onFormatCurrency }) {
+export default function List({ items, onFormatCurrency, onToggleItems }) {
   return (
     <ul>
       {items.map((item) => (
@@ -8,6 +8,7 @@ export default function List({ items, onFormatCurrency }) {
           key={item.id}
           item={item}
           onFormatCurrency={onFormatCurrency}
+          onToggleItem={onToggleItems}
         />
       ))}
     </ul>

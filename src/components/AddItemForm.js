@@ -9,13 +9,6 @@ export default function AddItemForm({ onAddItems}) {
     setPrice(onlyNumbers);
   }
 
-  function formatCurrency(value) {
-    return new Intl.NumberFormat("de-DE", {
-      style: "currency",
-      currency: "EUR"
-    }).format(value)
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -23,7 +16,8 @@ export default function AddItemForm({ onAddItems}) {
       id: crypto.randomUUID(),
       quantity,
       name,
-      price: Number(price)
+      price: Number(price),
+      bought: false,
     };
     console.log(newItem);
     onAddItems(newItem);
