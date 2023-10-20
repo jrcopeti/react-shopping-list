@@ -1,7 +1,20 @@
 import { useState } from "react";
-export default function AddItemForm({ onAddItems }) {
+export default function AddItemForm({ onAddItems}) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+
+  function handlePriceChange(e) {
+    const onlyNumbers = e.target.value.replace(/[^0-9.]/g, "");
+    setPrice(onlyNumbers);
+  }
+
+  function formatCurrency(value) {
+    return new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR"
+    }).format(value)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -10,22 +23,42 @@ export default function AddItemForm({ onAddItems }) {
       id: crypto.randomUUID(),
       quantity,
       name,
+      price: Number(price)
     };
-    console.log(newItem)
+    console.log(newItem);
     onAddItems(newItem);
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
+        <select
+          value={quantity}
+          onChange={(e) => setQuantity(Number(e.target.value))}
+        >
           {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
             <option value={num} key={num}>
               {num}
             </option>
           ))}
         </select>
-        <input type="text" placeholder="item" value={name} onChange={(e) => setName((e.target.value))}></input>
+
+        <input
+          type="text"
+          placeholder="item"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+
+        <input
+          type="number"
+          min="0.1"
+          step="0.01"
+          placeholder="price"
+          value={price}
+          onChange={handlePriceChange}
+        ></input>
+
         <button>Add Item</button>
       </form>
     </div>
