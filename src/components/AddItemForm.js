@@ -21,6 +21,10 @@ export default function AddItemForm({ onAddItems}) {
     };
     console.log(newItem);
     onAddItems(newItem);
+
+    setQuantity(1);
+    setName("");
+    setPrice("");
   }
 
   return (
