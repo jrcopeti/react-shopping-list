@@ -31,4 +31,4 @@ This project is a practical, hands-on application developed using React. It's a 
 
 - **Conditional Rendering:** The app practices conditional rendering methods to display content based on different states, enhancing the user experience.
 
-- **Event Handling:** Incorporated various event handlers to manage user inputs, form submissions, and list item actions.
+- **Event Handling:** Incorporated event handlers to manage user inputs, form submissions, and list item actions.
