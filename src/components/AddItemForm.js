@@ -6,7 +6,9 @@ export default function AddItemForm({ onAddItems }) {
 
   function handlePriceChange(e) {
     const onlyNumbers = e.target.value.replace(/[^0-9.,]/g, "");
-    setPrice(onlyNumbers);
+    const normalizedInput = onlyNumbers.replace(/,/g, ".");
+
+    setPrice(normalizedInput);
   }
 
   function handleSubmit(e) {
@@ -34,7 +36,7 @@ export default function AddItemForm({ onAddItems }) {
 
   return (
     <div>
-        <h4>What do you need for your next shopping?</h4>
+      <h4>What do you need for your next shopping?</h4>
       <form className="add-form" onSubmit={handleSubmit}>
         <select
           value={quantity}
