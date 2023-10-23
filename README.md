@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# React Shopping List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[https://shopping-list-jose.netlify.app/](https://shopping-list-jose.netlify.app/)
 
-## Available Scripts
+This project is a practical, hands-on application developed using React. It's a simple yet robust shopping list app that allows users to keep track of their shopping items.
 
-In the project directory, you can run:
+![Screenshot](public/screenshot1.png)
+![Screenshot](public/screenshot2.png)
 
-### `npm start`
+## Main Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add Items:** Users can add items to their shopping list, including the name, quantity and price.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Delete Items:**  This feature helps in managing items efficiently, especially removing items that have already been bought or are no longer needed. Users have the option to clear out all items from the list at once.
 
-### `npm test`
+- **Check Off Items:** Users can mark items as purchased. This feature helps in tracking which items have already been bought without removing them from the list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Persistent Storage:** The application uses local storage to save items. This feature ensures that the user's list is accessible even after closing the app or rebooting the system.
 
-### `npm run build`
+- **Price Tracking:** Each item can have its price, and the app will calculate the total cost of items in the cart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Sort Items:** Users can sort items by order added, name, price or if they were bought.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## React Concepts Implemented
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Components:** The app is built using React functional components with hooks.
 
-### `npm run eject`
+- **State Management:** Utilizes React's useState hook for local state management within components, providing a way to add, delete, or edit items on the list.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Effect Hook:** The useEffect hook is in play, demonstrating its utility in handling side effects in the app, such as interactions with the local storage.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Conditional Rendering:** The app practices conditional rendering methods to display content based on different states, enhancing the user experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Event Handling:** Incorporated various event handlers to manage user inputs, form submissions, and list item actions.
