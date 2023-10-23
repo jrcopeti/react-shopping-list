@@ -19,6 +19,10 @@ export default function App() {
     );
   }
 
+  function handleDeleteItems(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+
   function formatCurrency(value) {
     return new Intl.NumberFormat("de-DE", {
       style: "currency",
@@ -30,7 +34,12 @@ export default function App() {
     <div>
       <Title />
       <AddItemForm onAddItems={handleAddItems} />
-      <List items={items} onFormatCurrency={formatCurrency} onToggleItems={handleToggleItems} />
+      <List
+        items={items}
+        onFormatCurrency={formatCurrency}
+        onToggleItems={handleToggleItems}
+        onDeleteItems={handleDeleteItems}
+      />
       <Status items={items} onFormatCurrency={formatCurrency} />
     </div>
   );
