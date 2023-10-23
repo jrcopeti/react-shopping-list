@@ -5,7 +5,7 @@ export default function AddItemForm({ onAddItems }) {
   const [price, setPrice] = useState("");
 
   function handlePriceChange(e) {
-    const onlyNumbers = e.target.value.replace(/[^0-9.]/g, "");
+    const onlyNumbers = e.target.value.replace(/[^0-9.,]/g, "");
     setPrice(onlyNumbers);
   }
 
