@@ -6,8 +6,8 @@ export default function AddItemForm({ onAddItems }) {
 
   function handlePriceChange(e) {
     const onlyNumbers = e.target.value.replace(/[^0-9.,]/g, "");
+    console.log(onlyNumbers);
     const normalizedInput = onlyNumbers.replace(/,/g, ".");
-
     setPrice(normalizedInput);
   }
 
@@ -57,9 +57,7 @@ export default function AddItemForm({ onAddItems }) {
         ></input>
 
         <input
-          type="number"
-          min="0.1"
-          step="0.01"
+          type="text"
           placeholder="price"
           value={price}
           onChange={handlePriceChange}
