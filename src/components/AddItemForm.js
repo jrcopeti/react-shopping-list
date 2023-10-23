@@ -14,8 +14,8 @@ export default function AddItemForm({ onAddItems }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!quantity || !name || !price) {
-      alert("Please fill all fields");
+    if (!name) {
+      alert("Please write any item");
       return;
     }
 
