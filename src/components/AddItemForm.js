@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function AddItemForm({ onAddItems}) {
+export default function AddItemForm({ onAddItems }) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -29,7 +29,8 @@ export default function AddItemForm({ onAddItems}) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+        <h4>What do you need for your next shopping?</h4>
+      <form className="add-form" onSubmit={handleSubmit}>
         <select
           value={quantity}
           onChange={(e) => setQuantity(Number(e.target.value))}
