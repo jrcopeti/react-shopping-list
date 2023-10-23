@@ -1,6 +1,6 @@
 export default function Title() {
  return (
-    <div>
+    <div className="title">
       <h1>Shopping List</h1>
     </div>
  )

@@ -23,6 +23,13 @@ export default function App() {
     setItems((items) => items.filter((item) => item.id !== id));
   }
 
+  function clearItems() {
+    const confirmed = window.confirm(
+      "Are you sure you want to clear the list?"
+    );
+    if (confirmed) setItems([]);
+  }
+
   function formatCurrency(value) {
     return new Intl.NumberFormat("de-DE", {
       style: "currency",
@@ -31,7 +38,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       <Title />
       <AddItemForm onAddItems={handleAddItems} />
       <List
@@ -39,6 +46,7 @@ export default function App() {
         onFormatCurrency={formatCurrency}
         onToggleItems={handleToggleItems}
         onDeleteItems={handleDeleteItems}
+        onClearItems={clearItems}
       />
       <Status items={items} onFormatCurrency={formatCurrency} />
     </div>
