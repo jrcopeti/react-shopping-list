@@ -5,7 +5,12 @@
 This project is a practical, hands-on application developed using React. It's a simple yet robust shopping list app that allows users to keep track of their shopping items.
 
 ![Screenshot](public/Screenshot2.png)
+
+Initial state.
+
 ![Screenshot](public/Screenshot1.png)
+
+Interacting.
 
 ## Main Features
 
