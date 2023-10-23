@@ -4,19 +4,20 @@ export default function ListItem({
   onToggleItem,
   onDeleteItem,
 }) {
+  const itemClass = item.bought ? "line-through checked" : "line-through";
   return (
     <li>
       <input
         type="checkbox"
-        value={item.bought}
+        checked={item.bought}
         onChange={() => onToggleItem(item.id)}
       ></input>
 
-      <span style={item.bought ? { textDecoration: "line-through" } : {}}>
+      <span className={itemClass}>
         {item.quantity} {item.name} {onFormatCurrency(item.price)}
       </span>
-      
-      <button onClick={() => onDeleteItem(item.id)}>Delete</button>
+
+      <button onClick={() => onDeleteItem(item.id)}>X</button>
     </li>
   );
 }

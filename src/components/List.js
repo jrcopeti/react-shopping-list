@@ -24,7 +24,17 @@ export default function List({
   sortedItems = [...items].sort((a, b) => Number(b.bought) - Number(a.bought))
 
   return (
-    <div>
+    <>
+    <div className="list">
+        {items.length !== 0 ? <div className="sort-by">
+        <label for="sortby-select">Sort by </label>
+          <select value={sortby} onChange={(e) => setSortby(e.target.value)}>
+            <option value="order added">Order Added</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="items bought">Items Bought</option>
+          </select>
+        </div> : ""}
       <ul>
         {sortedItems.map((item) => (
           <ListItem
@@ -36,15 +46,11 @@ export default function List({
           />
         ))}
       </ul>
-      <div>
-        <select value={sortby} onChange={(e) => setSortby(e.target.value)}>
-          <option value="order added">Order Added</option>
-          <option value="name">Name</option>
-          <option value="price">Price</option>
-          <option value="items bought">Items Bought</option>
-        </select>
-      </div>
-      {items.length ? <button onClick={onClearItems}>Clear List</button> : ""}
+      {items.length ? <button id="clear-list" onClick={onClearItems}>Clear List</button> : ""}
+
     </div>
+
+
+    </>
   );
 }

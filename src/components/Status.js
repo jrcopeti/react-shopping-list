@@ -1,5 +1,5 @@
 export default function Status({ items, onFormatCurrency }) {
-  if (!items.length) return <p>No items on the list</p>;
+  if (!items.length) return <p className="status" id="no-items">No items on the list</p>;
 
 
   const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -12,11 +12,11 @@ export default function Status({ items, onFormatCurrency }) {
 const percentage = (itemsBought / totalQuantity) * 100
 
   return (
-    <footer>
-      <p>Total Items: {totalQuantity}</p>
-      <p>Items bought: {itemsBought}</p>
-      <p> Total price: {onFormatCurrency(totalPrice)} </p>
-      <p>{percentage === 100 ? <strong>Shopping completed</strong> : `Shopping progress: ${Math.round(percentage)}%`}</p>
+    <footer className="status">
+      <p className="total">Total Items | {totalQuantity}</p>
+      <p className="items"> Total price | {onFormatCurrency(totalPrice)} </p>
+      <p className="total">Items bought | {itemsBought}</p>
+      <p className="items">{percentage === 100 ? <strong>Shopping completed</strong> : `Shopping progress | ${Math.round(percentage)}%`}</p>
     </footer>
   );
 }
