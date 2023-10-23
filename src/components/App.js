@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddItemForm from "./AddItemForm.js";
 import List from "./List.js";
 import Status from "./Status.js";
 import Title from "./Title.js";
 
 export default function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    const savedItems = localStorage.getItem("shoppingListItems");
+    return savedItems ? JSON.parse(savedItems) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("shoppingListItems", JSON.stringify(items));
+  }, [items]);
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
