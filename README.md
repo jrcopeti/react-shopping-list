@@ -6,11 +6,12 @@ This project is a practical, hands-on application developed using React. It's a 
 
 ![Screenshot](public/Screenshot2.png)
 
-Initial state.
+
+Interacting with the app.
 
 ![Screenshot](public/Screenshot1.png)
 
-Interacting.
+
 
 ## Main Features
 
