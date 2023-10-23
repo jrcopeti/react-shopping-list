@@ -29,6 +29,6 @@ This project is a practical, hands-on application developed using React. It's a 
 
 - **Effect Hook:** The useEffect hook is in play, demonstrating its utility in handling side effects in the app, such as interactions with the local storage.
 
-- **Conditional Rendering:** The app practices conditional rendering methods to display content based on different states, enhancing the user experience.
+- **Conditional Rendering:** The app practices conditional rendering methods to display content based on different states.
 
 - **Event Handling:** Incorporated event handlers to manage user inputs, form submissions, and list item actions.
