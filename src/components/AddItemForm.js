@@ -12,6 +12,11 @@ export default function AddItemForm({ onAddItems }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if (!quantity || !name || !price) {
+      alert("Please fill all fields");
+      return;
+    }
+
     const newItem = {
       id: crypto.randomUUID(),
       quantity,
