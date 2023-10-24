@@ -23,7 +23,7 @@ Interacting with the app.
 
 - **Persistent Storage:** The application uses local storage to save items. This feature ensures that the user's list is accessible even after closing the app or rebooting the system.
 
-- **Price Tracking:** Each item can have its price, and the app will calculate the total cost of items in the cart.
+- **Price Tracking:** Each item can have its price, and the app will calculate the total cost of items in the cart. The prices are displayed on the currency based on the default language of the user's browser.
 
 - **Sort Items:** Users can sort items by order added, name, price or if they were bought.
 
