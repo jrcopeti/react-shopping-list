@@ -37,10 +37,22 @@ export default function App() {
     if (confirmed) setItems([]);
   }
 
+  function getCurrencyFromLocale(locale) {
+    const knownCurrencies = {
+      "en-US": "USD",
+      "en-GB": "GBP",
+      "de-DE": "EUR",
+      "pt-BR": "BRL",
+    };
+    return knownCurrencies[locale] || "EUR";
+  }
+
   function formatCurrency(value) {
-    return new Intl.NumberFormat("de-DE", {
+    const userLocale = navigator.language || "de-DE";
+
+    return new Intl.NumberFormat(`${userLocale}`, {
       style: "currency",
-      currency: "EUR",
+      currency: getCurrencyFromLocale(userLocale),
     }).format(value);
   }
 
