@@ -1,3 +1,5 @@
+import AddItemForm from "./AddItemForm";
+
 export default function ListItem({
   item,
   onFormatCurrency,
@@ -13,9 +15,11 @@ export default function ListItem({
         onChange={() => onToggleItem(item.id)}
       ></input>
 
-      <span className={itemClass}>
+      {item.price === 0 ?  <span className={itemClass}>
+        {item.quantity} {item.name}</span> :  <span className={itemClass}>
         {item.quantity} {item.name} {onFormatCurrency(item.price)}
-      </span>
+      </span> }
+
 
       <button onClick={() => onDeleteItem(item.id)}>X</button>
     </li>

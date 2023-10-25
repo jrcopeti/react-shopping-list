@@ -51,14 +51,15 @@ export default function AddItemForm({ onAddItems }) {
 
         <input
           type="text"
-          placeholder="item"
+          maxLength="25"
+          placeholder="item..."
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></input>
 
         <input
           type="text"
-          placeholder="price"
+          placeholder="price (optional)"
           value={price}
           onChange={handlePriceChange}
         ></input>
