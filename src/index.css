@@ -82,15 +82,15 @@ input:hover {
   border-color: #9fa8a3;
 }
 
+button {
+  background-color:#1d9a2e;
+  color: #ffffff;
+}
+
 select:focus,
 input:focus {
   border-color: #5a3e2b;
   outline: none;
-}
-
-button:hover {
-  background-color:#1d9a2e;
-  color: #ffffff;
 }
 
 .sort-by {
@@ -108,7 +108,8 @@ button:hover {
 
 #clear-list {
   background-color: #e33b3b;
-  border: none;
+
+  border: 2px solid #ecedeb;
 
   font-size: 12px;
   font-weight: 700;
@@ -117,6 +118,11 @@ button:hover {
   text-transform: uppercase;
   margin-inline: auto;
   display: block;
+}
+
+#clear-list:focus {
+  border-color: #9fa8a3;
+  outline: none;
 }
 
 .list {
@@ -265,6 +271,13 @@ input[type="checkbox"] {
     font-size: 16px;
   }
 
+ .add-form button {
+  background-color: #1d9a2e;
+  color: #ffffff;
+  }
+
+
+
   .sort-by select {
     font-size: 15px;
   }
@@ -313,8 +326,6 @@ input[type="checkbox"] {
   }
 
   .list li span {
-    flex-grow: 1;
-    overflow: hidden;
     position: relative;
     word-spacing: 3px;
   }
