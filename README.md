@@ -4,13 +4,7 @@
 
 This project is a practical, hands-on application developed using React. It's a simple yet robust shopping list app that allows users to keep track of their shopping items.
 
-![Screenshot](public/Screenshot2.png)
-
-
-Interacting with the app.
-
-![Screenshot](public/Screenshot1.png)
-
+![Screenshot](public/screenshot3.png)
 
 
 ## Main Features
@@ -25,7 +19,7 @@ Interacting with the app.
 
 - **Price Tracking:** Each item can have its price, and the app will calculate the total cost of items in the cart. The prices are displayed on the currency based on the default language of the user's browser.
 
-- **Sort Items:** Users can sort items by order added, name, price or if they were bought.
+- **Sort Items:** Users can sort items by order added, name, price. quantity or if they were purchased.
 
 ## React Concepts Implemented
 
