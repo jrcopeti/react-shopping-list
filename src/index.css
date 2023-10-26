@@ -18,6 +18,7 @@ body {
 
 h1 {
   color: #ff3c00;
+  opacity: 0.9;
   font-family: "Caveat";
   text-align: center;
   font-size: 90px;
@@ -71,6 +72,11 @@ input {
   font-size: 20px;
 }
 
+::placeholder {
+  color: #5a3e2b;
+  opacity: 0.7;
+}
+
 label {
   font-size: 18px;
   margin-right: 12px;
@@ -82,9 +88,14 @@ input:hover {
   border-color: #9fa8a3;
 }
 
-button {
-  background-color:#1d9a2e;
+#add-button {
+  background-color: #1d9a2e;
+  opacity: 0.9;
   color: #ffffff;
+  display: inherit;
+  align-items: center;
+  box-shadow: 1.5px 1.5px 3px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 1s ease-in-out;
 }
 
 select:focus,
@@ -108,9 +119,8 @@ input:focus {
 
 #clear-list {
   background-color: #e33b3b;
-
+  opacity: 0.9;
   border: 2px solid #ecedeb;
-
   font-size: 12px;
   font-weight: 700;
   color: #ffffff;
@@ -152,9 +162,10 @@ input:focus {
   font-family: "Caveat";
   font-size: 36px;
 }
-
+/* delete button */
 li button {
   background-color: #e33b3b;
+  opacity: 0.9;
   border: none;
   padding: 0.4rem 0.9rem;
   font-size: 12px;
@@ -172,8 +183,8 @@ li button:hover {
 }
 
 input[type="checkbox"] {
-  height: 2rem;
-  width: 2rem;
+  height: 20px;
+  width: 20px;
   accent-color: #1d9a2e;
 }
 
@@ -271,12 +282,18 @@ input[type="checkbox"] {
     font-size: 16px;
   }
 
- .add-form button {
-  background-color: #1d9a2e;
-  color: #ffffff;
+  #item-input {
+    max-width: 200px;
   }
 
+  #price-input {
+    max-width: 130px;
+  }
 
+  .add-form button {
+    background-color: #1d9a2e;
+    color: #ffffff;
+  }
 
   .sort-by select {
     font-size: 15px;
@@ -293,9 +310,9 @@ input[type="checkbox"] {
     font-size: 20px;
     padding: 8px;
   }
-
+  /* clear list button */
   li button {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   input[type="checkbox"] {
@@ -303,11 +320,10 @@ input[type="checkbox"] {
     flex-grow: 0;
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .status {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 16px;
     max-height: unset;
@@ -328,14 +344,5 @@ input[type="checkbox"] {
   .list li span {
     position: relative;
     word-spacing: 3px;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #5a3e2b;
-    opacity: 1;
-  }
-  ::placeholder {
-    color: #5a3e2b;
-    opacity: 1;
   }
 }
