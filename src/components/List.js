@@ -20,7 +20,10 @@ export default function List({
   if (sortby === "price")
     sortedItems = [...items].sort((a, b) => a.price - b.price);
 
-  if (sortby === "items bought")
+  if(sortby === "quantity")
+  sortedItems = [...items].sort((a, b) => a.quantity - b.quantity);
+
+  if (sortby === "items purchased")
     sortedItems = [...items].sort(
       (a, b) => Number(b.bought) - Number(a.bought)
     );
@@ -35,7 +38,8 @@ export default function List({
               <option value="order added">Order Added</option>
               <option value="name">Name</option>
               <option value="price">Price</option>
-              <option value="items bought">Items Bought</option>
+              <option value="quantity">Quantity</option>
+              <option value="items purchased">Items Purchased</option>
             </select>
           </div>
         ) : (

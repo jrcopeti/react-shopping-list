@@ -20,11 +20,11 @@ export default function Status({ items, onFormatCurrency }) {
   return (
     <footer className="status">
       <p className="total">Total Items | {totalQuantity}</p>
-      <p className="items"> Total price | {onFormatCurrency(totalPrice)} </p>
-      <p className="total">Items bought | {itemsBought}</p>
+      <p className="items"> Total Price | {onFormatCurrency(totalPrice)} </p>
+      <p className="total">Items Purchased | {itemsBought}</p>
       <p className="items">
         {percentage === 100 ? (
-          <strong>Shopping completed</strong>
+          <strong>Shopping completed!</strong>
         ) : (
           `Shopping progress | ${Math.round(percentage)}%`
         )}

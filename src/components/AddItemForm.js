@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { HiShoppingCart } from "react-icons/hi";
+
 export default function AddItemForm({ onAddItems }) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
@@ -50,6 +52,7 @@ export default function AddItemForm({ onAddItems }) {
         </select>
 
         <input
+          id="item-input"
           type="text"
           maxLength="25"
           placeholder="item..."
@@ -58,13 +61,14 @@ export default function AddItemForm({ onAddItems }) {
         ></input>
 
         <input
+          id="price-input"
           type="text"
           placeholder="price (optional)"
           value={price}
           onChange={handlePriceChange}
         ></input>
+        <button id="add-button"><HiShoppingCart />+</button>
 
-        <button>Add Item</button>
       </form>
     </div>
   );
